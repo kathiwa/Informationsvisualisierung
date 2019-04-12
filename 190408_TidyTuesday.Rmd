@@ -1,0 +1,41 @@
+---
+title: "Erste Übung zum Tidy Tuesday"
+author: "Katharina Wagner"
+date: "8 April 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+###Daten laden
+```{r message=FALSE, warning=FALSE}
+
+library(tidyverse)
+
+bike_traffic <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-02/bike_traffic.csv")
+```
+###Deskriptive Analyse:
+```{r descriptives}
+
+bike_traffic %>%
+  group_by(direction)%>%
+  summarize(bike_count= mean(bike_count, na.rm=T))%>%
+  ggplot()+
+  aes(y = bike_count, x = direction, fill=direction) +
+   labs(title = "Getrackte Fahrradfahrer in den unterschiedlichen Himmelsrichtungen" ,
+    subtitle = "Bardiagramm: Anzahl an gezählten Fahrradfahrern pro Stunde, aufgeteilt in Himmelsrichtungen",
+    x = "Himmelsrichtungen", 
+    y = "Getrackte Fahrradfahrer pro Stunde",
+    fill="Himmelsichtungen",
+    caption = "Das Bardiagramm zeigt, dass besonders im Norden und Süden mehr Fahrradfahrer getrackt wurden, als im Osten und im Westen.") +
+  geom_bar(stat="identity")
+
+
+```
+
