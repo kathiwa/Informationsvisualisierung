@@ -1,0 +1,44 @@
+---
+title: "190423_TidyTuesday"
+author: "Katharina Wagner"
+date: "23 April 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+####Daten laden 
+```{r data, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(hcictools)
+
+eu_balance <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-16/eu_balance.csv")
+
+rwthcolor <- hcictools::rwth.colorpalette()
+
+```
+
+####Deskriptive Analyse
+```{r descriptives, message=FALSE, warning=FALSE}
+
+eu_balance %>%
+  group_by(country)%>%
+  ggplot()+
+  aes(y = value, x = country, fill= year) +
+   labs(title = "Vergleich der Haushaltswerte einiger EU-Mitgliedstaaten" ,
+    subtitle = "Bardiagramm: Haushaltswerte einiger EU-Mitgliedstaaten zwischen 2009 und 2015",
+    x = "Haushaltswerte in Milliarden Euro", 
+    y = "EU-Mitgliedsstaaten",
+    fill = "Jahr") +
+  geom_bar(stat="identity") +
+  coord_flip()
+```
+
+Beschreibung Bardiagramm:
+Das Bardiagramm zeigt, dass die Niederlande, Luxemburg und Deutschland im Durchschnitt einen positiven Haushaltswert vorweisen. Die anderen Staaten hingegen weisen einen negativen Haushaltwert vor, wobei Frankreich, Spanien und Italien die geringsten Haushaltswerte im Vergleich zu den anderen EU-Mitgliedsstaaten vorweisen und Deutschland den höchsten aufweist.
