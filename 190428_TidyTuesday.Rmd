@@ -1,0 +1,24 @@
+---
+title: "20190428_TidyTuesday_Anime"
+author: "Katharina Wagner"
+date: "28 April 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###Daten laden
+
+```{r data}
+tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv")
+```
+
+## Deskriptive Statistik
+
+```{r descriptive, echo=FALSE}
+
+
+```
+
