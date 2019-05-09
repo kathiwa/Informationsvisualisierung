@@ -12,11 +12,11 @@ library(shiny)
 library(tidyverse)
 library(DT)
 
-#tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv")
+tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv")
 #write_rds(tidy_anime,"temp.rds")
 
 
-tidy_anime <- read_rds("temp.rds")
+#tidy_anime <- read_rds("temp.rds")
 
 anime <- tidy_anime %>% select(animeID, name, title_english, genre, episodes, rating, score, scored_by, rank,popularity) %>% mutate(rating = factor(rating))
 
