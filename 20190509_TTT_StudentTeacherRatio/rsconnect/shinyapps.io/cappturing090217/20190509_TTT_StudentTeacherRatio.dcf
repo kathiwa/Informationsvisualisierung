@@ -1,0 +1,13 @@
+name: 20190509_TTT_StudentTeacherRatio
+title: 20190509_TTT_StudentTeacherRatio
+username:
+account: cappturing090217
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 930791
+bundleId: 2085480
+url: https://cappturing090217.shinyapps.io/20190509_TTT_StudentTeacherRatio/
+when: 1557905406.52729
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: appp.R

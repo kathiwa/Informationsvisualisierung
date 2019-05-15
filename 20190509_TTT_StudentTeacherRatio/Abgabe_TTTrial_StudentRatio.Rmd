@@ -1,0 +1,14 @@
+---
+title: "Abgabe_TTTrial_StudentRatio"
+author: "Katharina Wagner"
+date: "15 Mai 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abgabe Student Ratio
+
+(http://cappturing090217.shinyapps.io/20190509_TTT_StudentTeacherRatio)[http://cappturing090217.shinyapps.io/20190509_TTT_StudentTeacherRatio]

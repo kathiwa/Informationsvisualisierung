@@ -12,7 +12,7 @@ library(shiny)
 library(tidyverse)
 library(DT)
 
-tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv")
+#tidy_anime <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-23/tidy_anime.csv")
 #write_rds(tidy_anime,"temp.rds")
 
 
