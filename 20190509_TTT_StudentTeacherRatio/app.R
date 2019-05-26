@@ -110,11 +110,11 @@ server <- function(input, output) {
         aes(country,totalstudentRatio, fill=factor(year),group = factor(year))) + 
       geom_col(position = "dodge2") +
       scale_fill_discrete() +
-      coord_flip()+
-      labs(x="Student Ratio",
-         y="Countries",
+      labs(x="Countries",
+         y="Student Ratio",
          title= "Student Ratio over Year",
-         fill="Jahr")
+         fill = "Jahr")+
+      coord_flip()
 
   })
 }  
